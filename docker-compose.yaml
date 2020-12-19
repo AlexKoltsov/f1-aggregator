@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  postgres:
+    container_name: f1_postgres
+    image: postgres
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: plm
+      POSTGRES_PASSWORD: postgres
