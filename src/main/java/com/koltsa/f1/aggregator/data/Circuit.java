@@ -2,10 +2,8 @@ package com.koltsa.f1.aggregator.data;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "circuits")
@@ -21,4 +19,6 @@ public class Circuit {
     private Double lng;
     private String alt;
     private String url;
+    @OneToMany(mappedBy = "circuit")
+    private List<Race> races;
 }
