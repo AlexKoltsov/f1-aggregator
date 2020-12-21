@@ -10,8 +10,6 @@ public class DriverDto {
 
     private Integer id;
 
-    private String ref;
-
     @Nullable
     private Integer number;
 
