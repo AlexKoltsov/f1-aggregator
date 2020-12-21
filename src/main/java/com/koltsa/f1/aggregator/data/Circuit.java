@@ -1,5 +1,6 @@
 package com.koltsa.f1.aggregator.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -28,6 +29,7 @@ public class Circuit {
 
     private String url;
 
+    @JsonIgnore // TODO: use dto instead of entities
     @OneToMany(mappedBy = "circuit")
     private List<Race> races;
 }
