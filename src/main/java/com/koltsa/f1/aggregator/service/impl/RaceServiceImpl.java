@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -17,5 +18,10 @@ public class RaceServiceImpl implements RaceService {
     @Override
     public List<Race> findAll() {
         return raceRepo.findAll();
+    }
+
+    @Override
+    public Optional<Race> findById(Integer id) {
+        return raceRepo.findById(id);
     }
 }

@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -17,5 +18,10 @@ public class ConstructorServiceImpl implements ConstructorService {
     @Override
     public List<Constructor> findAll() {
         return constructorRepo.findAll();
+    }
+
+    @Override
+    public Optional<Constructor> findById(Integer id) {
+        return constructorRepo.findById(id);
     }
 }

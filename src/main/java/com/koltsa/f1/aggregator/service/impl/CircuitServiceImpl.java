@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequiredArgsConstructor
 @Service
@@ -17,5 +18,10 @@ public class CircuitServiceImpl implements CircuitService {
     @Override
     public List<Circuit> findAll() {
         return circuitRepo.findAll();
+    }
+
+    @Override
+    public Optional<Circuit> findById(Integer id) {
+        return circuitRepo.findById(id);
     }
 }
