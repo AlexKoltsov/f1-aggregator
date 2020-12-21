@@ -1,9 +1,11 @@
 package com.koltsa.f1.aggregator.data;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -29,7 +31,8 @@ public class Circuit {
 
     private String url;
 
-    @JsonIgnore // TODO: use dto instead of entities
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "circuit")
-    private List<Race> races;
+    private List<Race> races = new ArrayList<>();
 }
