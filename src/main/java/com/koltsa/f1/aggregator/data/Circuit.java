@@ -10,15 +10,24 @@ import java.util.List;
 @Data
 public class Circuit {
     @Id
-    private Integer circuitId;
-    private String circuitRef;
+    private Integer id;
+
+    private String ref;
+
     private String name;
+
     private String location;
+
     private String country;
+
     private Double lat;
+
     private Double lng;
+
     private String alt;
+
     private String url;
+
     @OneToMany(mappedBy = "circuit")
     private List<Race> races;
 }

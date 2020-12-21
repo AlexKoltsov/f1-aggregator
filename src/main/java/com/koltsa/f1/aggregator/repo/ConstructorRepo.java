@@ -2,8 +2,8 @@ package com.koltsa.f1.aggregator.repo;
 
 import com.koltsa.f1.aggregator.data.Constructor;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.stereotype.Repository;
 
-@RepositoryRestResource(collectionResourceRel = "constructors", path = "constructors")
+@Repository
 public interface ConstructorRepo extends JpaRepository<Constructor, Integer> {
 }

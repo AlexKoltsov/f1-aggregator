@@ -13,15 +13,23 @@ import java.time.LocalDate;
 @Data
 public class Driver {
     @Id
-    private Integer driverId;
-    private String driverRef;
+    private Integer id;
+
+    private String ref;
+
     @Nullable
     private Integer number;
+
     @Nullable
     private String code;
+
     private String forename;
+
     private String surname;
+
     private LocalDate dob;
+
     private String nationality;
+
     private String url;
 }

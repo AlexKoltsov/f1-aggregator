@@ -11,9 +11,13 @@ import javax.persistence.Table;
 @Data
 public class Constructor {
     @Id
-    private Integer constructorId;
-    private String constructorRef;
+    private Integer id;
+
+    private String ref;
+
     private String name;
+
     private String nationality;
+
     private String url;
 }
