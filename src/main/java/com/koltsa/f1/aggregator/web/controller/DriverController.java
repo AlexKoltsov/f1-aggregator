@@ -1,4 +1,4 @@
-package com.koltsa.f1.aggregator.web;
+package com.koltsa.f1.aggregator.web.controller;
 
 import com.koltsa.f1.aggregator.data.Driver;
 import com.koltsa.f1.aggregator.service.DriverService;
